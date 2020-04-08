@@ -11,6 +11,8 @@ import { map, catchError, tap } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
   
+  rateUSD: any
+  rateEUR: any
   endpoint = 'http://data.fixer.io/latest?access_key=a09ee58652dcda275398016195c7b149';
 
   constructor(private http: HttpClient) { }
@@ -25,10 +27,11 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    console.log('Hello')
+
     return this.http.get(this.endpoint).subscribe(
       data => {
-        console.log(data.rates)
+        this.rateUSD = data["rates"].USD;
+        this.rateEUR = data["rates"].EUR;
       }
     )
   }
