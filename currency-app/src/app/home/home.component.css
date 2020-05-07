@@ -1,3 +1,28 @@
+body {}
+
 h1 {
     padding: 1em;
 }
+
+.mat-toolbar {
+    background-color: #fff;
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-nav-button {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.left-layer {
+    background-color: #66CFFF;
+    height: 100%;
+    width: 25%;
+}
+
+
+
